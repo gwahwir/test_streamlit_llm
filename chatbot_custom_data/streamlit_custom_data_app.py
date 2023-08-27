@@ -5,12 +5,14 @@ import openai
 from llama_index import SimpleDirectoryReader
 
 st.set_page_config(page_title="Chat with the Streamlit docs, powered by LlamaIndex", page_icon="🦙", layout="centered", initial_sidebar_state="auto", menu_items=None)
-openai.api_key = st.secrets.openai_key
+openai_api_key = st.sidebar.text_input('OpenAI API Key')
+openai.api_key = openai_api_key
 st.title("Chat with the Streamlit docs, powered by LlamaIndex 💬🦙")
 st.info("this is a test line for info", icon="📃")
-         
-if "messages" not in st.session_state.keys(): # Initialize the chat messages history
-#Use session state to keep track of your chatbot's message history
+
+# Initialize the chat messages history
+# Use session state to keep track of your chatbot's message history    
+if "messages" not in st.session_state.keys(): 
     st.session_state.messages = [
         {"role": "assistant", "content": "Ask me a question about Streamlit's open-source Python library!"}
     ]
