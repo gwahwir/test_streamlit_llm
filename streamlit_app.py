@@ -8,7 +8,6 @@ openai_api_key = "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"
 
 #openai_api_key = st.sidebar.text_input('OpenAI API Key')
 
-st.title('🦜🔗 Quickstart App')
 
 def generate_response(input_text):
   llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
