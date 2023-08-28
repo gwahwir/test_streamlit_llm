@@ -23,7 +23,8 @@ with st.sidebar:
     with st.echo():
         st.write("This code will be printed to the sidebar.")
 
- 
-
+    
 with st.form('my_form'):
   text = st.text_area('Please enter your query:', 'What are the three key pieces of advice for learning how to code?')
+
+  st.write("where will this code be?")
