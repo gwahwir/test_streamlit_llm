@@ -6,10 +6,6 @@ st.title('🦜🔗 Test Trial App')
 
 with st.sidebar:
     
-    with st.spinner("Loading..."):
-        time.sleep(5)
-    st.success("Done!")
-
     add_radio = st.radio(
         "Choose a shipping method",
         ("Standard (5-15 days)", "Express (2-5 days)", "SLOW (100 days)")
@@ -33,3 +29,7 @@ with st.form('my_form'):
         )
 
     st.write("where will this code be then?")
+
+    with st.spinner("Loading..."):
+        time.sleep(5)
+    st.success("Done!")
