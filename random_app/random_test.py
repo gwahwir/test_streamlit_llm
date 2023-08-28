@@ -13,6 +13,13 @@ with st.sidebar:
        "How would you like to be contacted?", 
        ("Email", "Home phone", "Mobile phone","snail mail")
        )
+    
+    with st.echo():
+        st.write("This code will be printed to the sidebar.")
+
+    with st.spinner("Loading..."):
+        time.sleep(5)
+    st.success("Done!")
 
 with st.form('my_form'):
   text = st.text_area('Please enter your query:', 'What are the three key pieces of advice for learning how to code?')
