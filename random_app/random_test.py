@@ -27,5 +27,9 @@ with st.sidebar:
 
     
 with st.form('my_form'):
-  text = st.text_area('Please enter your query:', 'What are the three key pieces of advice for learning how to code?')
+    text = st.text_area(
+        'Please enter your query:', 
+        'What are the three key pieces of advice for learning how to code?'
+        )
 
+    st.write("where will this code be then?")
