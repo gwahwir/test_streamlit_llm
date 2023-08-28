@@ -1,9 +1,15 @@
 import streamlit as st
+import time
 
 st.title('🦜🔗 Test Trial App')
 
 
 with st.sidebar:
+    
+    with st.spinner("Loading..."):
+        time.sleep(5)
+    st.success("Done!")
+
     add_radio = st.radio(
         "Choose a shipping method",
         ("Standard (5-15 days)", "Express (2-5 days)", "SLOW (100 days)")
@@ -17,9 +23,7 @@ with st.sidebar:
     with st.echo():
         st.write("This code will be printed to the sidebar.")
 
-    with st.spinner("Loading..."):
-        time.sleep(5)
-    st.success("Done!")
+ 
 
 with st.form('my_form'):
   text = st.text_area('Please enter your query:', 'What are the three key pieces of advice for learning how to code?')
