@@ -6,7 +6,7 @@ st.title('🦜🔗 Test Trial App')
 st.write("the first of where will this code be")
 st.markdown("what is a markdown")
 st.subheader("subheaders are funny")
-st.code("what happens here?")
+st.code("x = 2023")
 st.latex(r''' a+a r^1+a r^2+a r^3 ''')
 
 
